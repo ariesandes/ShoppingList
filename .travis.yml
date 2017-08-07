@@ -1,0 +1,13 @@
+language: node_js
+sudo: required
+dist: trusty
+node_js:
+- "7.6.0"
+
+before_script:
+- export CHROME_BIN=/usr/bin/google-chrome
+- sudo apt-get update
+- sudo apt-get install -y libappindicator1 fonts-liberation
+- sudo apt-get install chromium-browser
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
